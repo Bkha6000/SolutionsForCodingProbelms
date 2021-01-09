@@ -17,16 +17,16 @@ import java.util.Arrays;
 public class Solutions{
 
 
-  /*
-  / An efficent solution to the two-sum problem that makes use of sorting.
-  / This method needs to return true if there are two numbers in the array that
-  / add up to k. The efficent solution below uses a hash set and only
-  / goes through the array once. This makes this solution be faster than
-  / O(n^2).
-  /
-  /
-  */
-  private boolean sumsToTarget(int[] arr, int k) {
+/*
+/ An efficent solution to the two-sum problem that makes use of sorting.
+/ This method needs to return true if there are two numbers in the array that
+/ add up to k. The efficent solution below uses a hash set and only
+/ goes through the array once. This makes this solution be faster than
+/ O(n^2).
+/
+/
+*/
+ private boolean sumsToTarget(int[] arr, int k) {
     HashSet<Integer> values = new HashSet<Integer>();
     for (int i = 0; i < arr.length; i++) {
         if (values.contains(k – arr[i])) {
@@ -37,17 +37,17 @@ public class Solutions{
     }
     return false;
   }
-  /*
-  / An efficent solution to the threesum problem that makes use of sorting.
-  / This method is supposed to find three numbers in the nums array whose
-  / sum is equal to 0. It returns a list of integer arrays that have three
-  / numbers that add up to 0. Each integer array must be unique.
-  / This solution uses three pointers. It stops looking for triplets if the value
-  //at the smallest index is negative. That is why this solution has time
-  /complexity that is better than O(n^2)
-  /
-  /
-  */
+ /*
+ / An efficent solution to the threesum problem that makes use of sorting.
+ / This method is supposed to find three numbers in the nums array whose
+ / sum is equal to 0. It returns a list of integer arrays that have three
+ / numbers that add up to 0. Each integer array must be unique.
+ / This solution uses three pointers. It stops looking for triplets if the value
+ / at the smallest index is negative. That is why this solution has time
+ /complexity that is better than O(n^2)
+ /
+ /
+*/
   public List<List<Integer>> threeSum(List<List<Integer>> tripletsList) {
       List<List<Integer>> jok1;
 
@@ -91,14 +91,14 @@ public class Solutions{
       }
       return jok1;
   }
-  /*
-  / Given two strings, this method finds out if the first string is a
-  / subsequence of the second string. A subsequence is a sequence that can be
-  / derived from another sequence by deleting some elements without
-  / changing the order of the remaining elements
-  /
-  */
-  public boolean isSubsequence(String s, String t) {
+ /*
+ / Given two strings, this method finds out if the first string is a
+ / subsequence of the second string. A subsequence is a sequence that can be
+ / derived from another sequence by deleting some elements without
+ / changing the order of the remaining elements
+ /
+*/
+public boolean isSubsequence(String s, String t) {
         int subindex = -1000;
 
         for(int i =0;i<s.length(); i++)
@@ -173,28 +173,28 @@ public class Solutions{
 
 
       }
-    /*
-    // You are given a two-dimensional array of potentially unequal height and width.
-    //It contains only 0s and 1s. This array represents a map: 0s are land, and 1s are water.
-    // A "island" on this map consists of any number of contiguous, adjacent water squares, where
-    //"adjacent" means "above", "below", "to the left of", or "to the right of" (that is,
-    // diagonal squares are not adjacent). Write a function which returns an array of
-    //the sizes of all islands represented in the input matrix. Note that
-    //these sizes do not need to be in any particular order.
-    //For example:
-    //int [][] input = {
-    //{1, 0, 0, 1, 0},
-    //{1, 0, 1, 0, 0},
-    //{0, 0, 1, 0, 1},
-    //{1, 0, 1, 0, 1},
-    //{1, 0, 1, 1, 0}};
-    /  island(input); // returns [1, 2, 2, 2, 5]
-    /This solution only goes through the given 2-d array once. It uses recursion
-    /to determine how many islands are connected to the neighbors of a island.
-    /It also uses a hash set to prevent the same island from being counted
-    /twice. The use of recursion, hashing and the set data structure makes
-    /this solution very efficent.
-    */
+/*
+// You are given a two-dimensional array of potentially unequal height and width.
+//It contains only 0s and 1s. This array represents a map: 0s are land, and 1s are water.
+// A "island" on this map consists of any number of contiguous, adjacent water squares, where
+//"adjacent" means "above", "below", "to the left of", or "to the right of" (that is,
+// diagonal squares are not adjacent). Write a function which returns an array of
+//the sizes of all islands represented in the input matrix. Note that
+//these sizes do not need to be in any particular order.
+//For example:
+//int [][] input = {
+//{1, 0, 0, 1, 0},
+//{1, 0, 1, 0, 0},
+//{0, 0, 1, 0, 1},
+//{1, 0, 1, 0, 1},
+//{1, 0, 1, 1, 0}};
+// island(input); // returns [1, 2, 2, 2, 5]
+//This solution only goes through the given 2-d array once. It uses recursion
+//to determine how many islands are connected to the neighbors of a island.
+//It also uses a hash set to prevent the same island from being counted
+//twice. The use of recursion, hashing and the set data structure makes
+//this solution very efficent.
+*/
     public int numIslands(char[][] grid) {
         int retlist=0;
         ArrayList<Integer> rivloc = new ArrayList<Integer>();
@@ -289,16 +289,16 @@ private static int CHARACTER_RANGE= 256;
      }
      return true;
  }
-   //Given an ascending sorted rotated array Arr of distinct integers of size N.
-   // The array is right rotated K times. Find the value of K.
-   //Input:
-   //N = 5
-  //Arr[] = {5, 1, 2, 3, 4}
-  //Output: 1
-  //Explanation: The given array is 5 1 2 3 4.
-  //The original sorted array is 1 2 3 4 5.
-  //We can see that the array was rotated
-  //1 times to the right.
+//Given an ascending sorted rotated array Arr of distinct integers of size N.
+// The array is right rotated K times. Find the value of K.
+//Input:
+//N = 5
+//Arr[] = {5, 1, 2, 3, 4}
+//Output: 1
+//Explanation: The given array is 5 1 2 3 4.
+//The original sorted array is 1 2 3 4 5.
+//We can see that the array was rotated
+//1 times to the right.
    int findKRotation(int arr[], int n) {
         //System.out.println(Arrays.toString(arr));
         for(int i=0; i<(n-1);i++){
@@ -383,8 +383,8 @@ private static int CHARACTER_RANGE= 256;
         return(incr==1||(decr==1));
 
     }
-    //Recursive function that finds all the islands that are conencted to the
-    //island located at index rivloci.
+//Recursive function that finds all the islands that are conencted to the
+//island located at index rivloci.
     private HashSet<Integer> findRivers(int rivloci,char [][] map2,HashSet<Integer> ha){
         HashSet<Integer> sizes = new HashSet<Integer>();
         int len= map2[0].length;
