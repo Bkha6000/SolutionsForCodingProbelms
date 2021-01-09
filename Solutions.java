@@ -271,9 +271,10 @@ public boolean isSubsequence(String s, String t) {
     /*  Function to check if two strings are anagram
    *   a, b: input string
    */
-private static int CHARACTER_RANGE= 256;
+
 
  public boolean isAnagram(String string1, String string2) {
+  private static int CHARACTER_RANGE= 256;
      if (string1.length() != string2.length()) {
          return false;
      }
