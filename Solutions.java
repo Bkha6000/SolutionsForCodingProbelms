@@ -274,7 +274,7 @@ public boolean isSubsequence(String s, String t) {
 
 
  public boolean isAnagram(String string1, String string2) {
-  private static int CHARACTER_RANGE= 256;
+  int CHARACTER_RANGE= 256;
      if (string1.length() != string2.length()) {
          return false;
      }
