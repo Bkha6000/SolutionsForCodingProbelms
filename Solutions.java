@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Arrays;
 
 
- // Definition of TreeNode that is uses in the BST closest value method
+ // Definition of TreeNode that is used in the BST closest value method
  public class Node {
       public int data;
      public Node left, right;
@@ -125,11 +125,11 @@ public class Solutions{
         }
         return true;
     }
-    // Return the minimum absolute difference between any tree node and the integer K
-    //This solution uses recursion and is efficent because it does not check
-    //every value in the binary search tree.
-      static int maxDiff(Node  root, int K)
-      {
+// Return the minimum absolute difference between any tree node and the integer K
+//This solution uses recursion and is efficent because it does not check
+//every value in the binary search tree.
+   static int maxDiff(Node  root, int K)
+   {
           if(root==null){
               return K;
           }
